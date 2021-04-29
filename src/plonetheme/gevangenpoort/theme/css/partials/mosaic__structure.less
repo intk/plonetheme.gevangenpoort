@@ -22,7 +22,11 @@ body.template-edit.mosaic-layout-customized {
 		margin-top: 0px;
 	}
 
-	&:not(.section-organizations):not(.section-organisaties):not(.section-vacancies):not(.section-werken-bij):not(.section-organizzazioni):not(.section-organizaciones) {
+	#main-container footer.row {
+		display: none;
+	}
+
+	&:not(.section-organizations):not(.section-organisaties):not(.section-vacancies)::not(.section-intk):not(.section-verhalen):not(.section-werken-bij):not(.section-organizzazioni):not(.section-organizaciones) {
 
 		#header-wrapper {
 			.documentFirstHeading {
@@ -346,6 +350,61 @@ body.template-edit.mosaic-layout-customized {
 		background: @theme-bg-header;
 	}
 }
+
+@media(min-width: 992px) {
+    body.portaltype-document.template-layout #main-container {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
+
+
+body.section-intk.template-layout.mosaic-grid,
+body.section-intk.template-edit.mosaic-layout-customized,
+body.section-verhalen.template-layout.mosaic-grid,
+body.section-verhalen.template-edit.mosaic-layout-customized {
+        div.main-container-wrapper {
+
+            @media (min-width: 992px) {
+                
+            }
+        }
+
+        div[class*="contentlisting"] {
+                float: none !important;
+        }
+
+        div[class*="sidetextslide"], div.outer-wrapper #main-container div[class*="sidetextslide"],
+        div[class*="videoslide"], div.outer-wrapper #main-container div[class*="videoslide"] {
+
+                ul {
+                        margin-top: -15px;
+
+                        li {
+                                .Lato();
+                                font-size: 1.250em;
+                                color: #999999;
+                        }
+                }
+
+                a {
+                        color: #999999;
+                        text-decoration: underline;
+                        &:hover,
+                        &:focus,
+                        &:active:focus {
+                                color: #242424;
+                        }
+                }
+        }
+
+        ul.slick-dots {
+                display: none;
+        }
+}
+
+
+
 
 
 
