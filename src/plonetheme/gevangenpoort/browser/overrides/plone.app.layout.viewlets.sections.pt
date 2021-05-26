@@ -17,13 +17,14 @@
         </button>
       </div>
 
-      <p>TEST TEST TEST</p>
       <div class="plone-collapse plone-navbar-collapse" id="portal-globalnav-collapse">
+
         <ul class="plone-nav plone-navbar-nav"
             id="portal-globalnav"
             tal:define="selected_tab python:view.selected_portal_tab">
           <navtree tal:replace="structure view/render_globalnav" />
         </ul>
+
       </div>
     </div>
   </nav>
