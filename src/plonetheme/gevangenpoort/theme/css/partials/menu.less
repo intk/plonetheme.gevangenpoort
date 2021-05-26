@@ -1,8 +1,110 @@
 /* THEME: MENU */
 
-.plone-nav li ul {
-  position: relative;
-  opacity: 1;
-  visibility: visible;
-  display: block;
+/* Menu items */
+.plone-nav li {
+	display: block;
+	clear: both;
+	text-align: left;
+
+	a {
+		font-size: 35px;
+		line-height: 1.2;
+		font-weight: 800;
+		text-transform: none;
+		color: @theme-menu-a-color;
+		padding: 12px 15px;
+
+		&:hover,
+		&:focus,
+		&:active {
+			background-color: transparent;
+	    	color: @theme-menu-a-color-hover;
+		}
+	}
+
+	label {
+		display: none;
+	}
+
+	ul {
+		position: relative;
+		opacity: 1;
+		visibility: visible;
+		display: block;
+		max-width: 100%;
+		height: auto;
+		padding-left: 0px;
+
+		li a {
+			background-color: transparent;
+			text-transform: none;
+
+			font-size: 20px;
+			line-height: 1.4;
+		}
+  	}
 }
+
+.plone-nav ul {
+	li {
+		display: block;
+	}
+}
+
+.plone-navbar-nav {
+	.current > a, 
+	.selected > a, 
+	.current > a:hover, 
+	.selected > a:hover, 
+	.current > a:focus, 
+	.selected > a:focus {
+		background-color: transparent;
+		color: @theme-menu-a-color-hover;
+	}
+}
+
+/* Container */
+.plone-navbar > .container {
+	width: 100%;
+
+	@media (min-width: 991px) {
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+}
+
+/* Container: when menu expanded */;
+.plone-toolbar-left-expanded .plone-navbar > .container {
+    width: 100%;
+    padding-left: 170px;
+}
+
+/* Global nav: flex */
+#portal-globalnav {
+	padding-bottom: 50px;
+}
+
+#portal-globalnav > li > a {
+	margin-top: 25px;
+	margin-bottom: 33px;
+}
+
+@media (min-width: 768px) {
+	#portal-globalnav {
+	    display: -webkit-box;
+	    display: -ms-flexbox;
+	    display: flex;
+	    -ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	}
+
+	#portal-globalnav > li {
+		-ms-flex-preferred-size: 0;
+	    flex-basis: 0;
+	    -webkit-box-flex: 1;
+	    -ms-flex-positive: 1;
+	    flex-grow: 1;
+	    max-width: 100%;
+	}
+}
+
