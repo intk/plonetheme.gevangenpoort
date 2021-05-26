@@ -46,6 +46,14 @@ function load_videos() {
 	}
 }
 
+function detect_safari() {
+  var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && window['safari'].pushNotification));
+
+  if (isSafari == true) {
+    jQuery("html").addClass("safari");
+  }
+}
+
 /*function load_carousel() {
 	require(['jquery', 'collective-slick-js'], function($) {
 	 	if ($(".slick-carousel:not(.slick-initialized)").length && typeof($(".slick-carousel").slick) !== "undefined") {
@@ -69,4 +77,7 @@ jQuery(document).ready(function () {
 
 	/* Video */
 	load_videos();
+
+	/* Detect safari */
+  	detect_safari();
 });
