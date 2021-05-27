@@ -82,8 +82,6 @@
     </div>
   </replace>
 
-  
-
   <replace css:theme="#header-image #content" css:content="#viewlet-above-content-body" method="raw" css:if-not-content="body.portaltype-wildcardvideo"/>
   <drop css:content="#viewlet-above-content-body" />
   <drop css:content="#content > header" />
@@ -91,8 +89,6 @@
   <!-- header image if video -->
   <replace css:theme-children="#header-image #content .leadImage" css:content="div.wcvideo-container" method="raw" css:if-content="body.portaltype-wildcardvideo"/>
   <drop css:content="#content-core div.wcvideo-container" />
-
-
 
   <!-- Alert message -->
   <replace css:theme-children="#global_statusmessage" css:content-children="#global_statusmessage" />
