@@ -18,15 +18,17 @@
     /* Body text */
     p {
         .Lato();
-        font-size: 1.250em;
+        font-size: 21px;
         line-height: @theme-line-height-text;
         color: @theme-description-color;
         margin: 0 0 @theme-text-margin;
     }
 
     .discreet {
-        font-size: 0.750em;
+        font-size: 14px;
         color: @theme-text-color;
+        opacity: 0.4;
+        line-height: 18px;
     }
 
     /* Headings */
@@ -36,20 +38,20 @@
         line-height: @theme-headings-line-height;
         color: @theme-headings-color;
         letter-spacing: @theme-headings-letter-spacing;
-        text-transform: uppercase;
+        text-transform: @theme-headings-text-transform;
     }
 
     h1, h2, h3 {
-        margin-top: @theme-line-height-computed;
-        margin-bottom: (@theme-line-height-computed / 2);
+        margin-top: @theme-headings-margin-top;
+        margin-bottom: @theme-headings-margin-bottom;
         a:hover, a:focus {
             text-decoration: none;
         }
     }
 
     h4, h5, h6 {
-        margin-top: (@theme-line-height-computed / 2);
-        margin-bottom: (@theme-line-height-computed / 2);
+        margin-top: @theme-headings-margin-top;
+        margin-bottom: @theme-headings-margin-bottom;
     }
 
     h1 { font-size: @theme-font-size-h1; };
@@ -75,28 +77,37 @@
 
     /* Blockquote */
     blockquote {
-        .Lato();
-        color: #666666;
+        .PlatinMTProBold();
+        color: @theme-color-orange;
 
         margin: 0 auto;
-        font-weight: @theme-font-weight-light;
+        font-weight: @theme-font-weight-regular;
         
-        font-size: 1.875em;
+        font-size: 32px;
         width: auto;
         float: left;
         background: none;
         
-        line-height: 45px;
+        line-height: 43px;
         
-        border-left: 2px solid #cccccc;
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-top: 0px;
+        border-left: 0px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 35px;
         padding-bottom: 5px;
-        margin-bottom: 28px;
+        margin-bottom: 35px;
 
+        text-align: center;
         float: none;
-        letter-spacing: 0.05em;
+        letter-spacing: 0.00em;
+
+        
+        p {
+            color: inherit;
+            font-size: inherit;
+            line-height: inherit;
+            font-family: inherit;
+        }
     }
 
     /* Tables */
@@ -144,7 +155,7 @@
 
 
     #content-core {
-        max-width: 640px;
+        max-width: 744px;
         margin: 0 auto;
         margin-top: 30px;
     }
