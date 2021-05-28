@@ -39,14 +39,65 @@
 
   z-index: 3;
   background-color: transparent;
-  right: 65px;
-  top: 63px;
+  right: 64px;
+  top: 62px;
 
   @media (max-width: 991px) {
-  	right: 20px;
+  	right: 19px;
   	top: 28px;
   }
 
+}
+
+.cd-nav-trigger-wrapper {
+  width: 51px;
+  height: 53px;
+  position: fixed;
+  z-index: 3;
+  right: 54px;
+  top: 45px;
+
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+
+  background-color: #ffffff;
+
+  @media (max-width: 991px) {
+    right: 9px;
+    top: 11px;
+  }
+}
+
+.cd-nav-tickets-button-wrapper {
+  position: fixed;
+  z-index: 3;
+  right: 105px;
+  top: 45px;
+
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+
+  a.btn {
+    border: 2px solid @theme-color-orange;
+  }
+
+  @media (max-width: 991px) {
+    right: 60px;
+    top: 11px;
+  }
+}
+
+body.navigation-is-open .cd-nav-trigger-wrapper {
+  background-color: transparent;
+}
+
+body.navigation-is-open .cd-nav-tickets-button-wrapper {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .cd-nav-trigger span {
