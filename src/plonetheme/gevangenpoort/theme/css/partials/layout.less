@@ -2,7 +2,7 @@
 
 .links() {
     a {
-        color: @theme-text-color;
+        color: @theme-color-orange;
         text-decoration: none;
 
         &:hover,
@@ -112,7 +112,9 @@
 
     /* Tables */
     table {
-        border: @theme-border-table;
+        background-color: transparent;
+        color: #000000;
+        border: 0px;
         margin-top: @theme-margin-bottom-table;
         margin-bottom: @theme-margin-bottom-table;
         font-size: @theme-font-size-table;
@@ -120,6 +122,9 @@
 
     table th {
         background-color: @theme-th-color-table;
+        color: #000000;
+        font-weight: 400;
+        .PlatinMTProBold();
     }
 
     table > thead > tr > th,
@@ -129,9 +134,21 @@
     table > tbody > tr > td,
     table > tfoot > tr > td {
         border: @theme-border-table;
-        padding: .75rem;
+        padding: 0px;
         font-family: inherit;
         font-size: inherit;
+        line-height: 34px;
+        border-top: 0px;
+        border-left: 0px;
+        border-right: 0px;
+        padding-top: 25px;
+        padding-bottom: 20px;
+    }
+
+    table > thead > tr > th,
+    table > tbody > tr > th,
+    table > tfoot > tr > th {
+        .PlatinMTProBold();
     }
     
     table > thead > tr > th,

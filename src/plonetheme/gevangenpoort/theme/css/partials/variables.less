@@ -48,27 +48,27 @@
 @theme-line-height-text:					 34px;
 @theme-text-margin:					 		 30px;
 
-@theme-font-size-h1:            			 1.850em;
-@theme-font-size-h2:            			 1.375em;
+@theme-font-size-h1:            			 50px;
+@theme-font-size-h2:            			 34px;
 @theme-font-size-h3:            			 23px;
-@theme-font-size-h4:            			 1.1em;
-@theme-font-size-h5:            			 0.950em;
-@theme-font-size-h6:            			 0.750em;
+@theme-font-size-h4:            			 16px;
+@theme-font-size-h5:            			 13px;
+@theme-font-size-h6:            			 10px;
 @theme-font-size-ul-ol:						 20px;
 
 
 @theme-link-color:							 #000000;
-@theme-link-hover-color:					 #000000;
+@theme-link-hover-color:					 @theme-color-orange;
 @theme-link-color-footer:					 #000000;
 @theme-link-hover-color-footer:				 #ffffff;
 
 
 /* Tables */	
-@theme-font-size-table:						 1.250em;
+@theme-font-size-table:						 21px;
 @theme-margin-top-table:					 30px;
 @theme-margin-bottom-table:					 30px;
-@theme-border-table:						 0px;
-@theme-th-color-table:						 #f8f8f8;
+@theme-border-table:						 2px solid #D5D4CE;
+@theme-th-color-table:						 transparent;
 
 /* Header */
 @theme-padding-top-header:					 50px;
@@ -99,7 +99,7 @@
 @theme-menu-a-color-not-currentlanguage:	 #7f7f7f;
 @theme-language-selector-a-color:			 #000000;
 @theme-menu-a-color-hover:					 #ffffff;
-@theme-menu-main-color:						 #F39102;
+@theme-menu-main-color:						 @theme-color-orange;
 @theme-menu-trigger-color:					 #000000;
 
 
@@ -134,13 +134,17 @@
 
 /* Buttons / Inputs */
 @theme-button-height:						 53px;
-@theme-button-background-color: 			 transparent;
+@theme-button-background-color: 			 @theme-color-orange;
+@theme-ghost-button-background-color:		 transparent;
 @theme-button-border-color: 				 #000000;
-@theme-button-color: 						 #000000;
+@theme-ghost-button-border-color:			 #000000;
+@theme-button-color: 						 #ffffff;
+@theme-ghost-button-color:					 #000000;
 @theme-button-text-transform: 				 none;
 @theme-button-hover-background-color: 		 #000000;
 @theme-button-hover-border-color: 			 #000000;
-@theme-button-hover-color: 					 #F39102;
+@theme-button-hover-color: 					 #ffffff;
+@theme-ghost-button-hover-color:			 @theme-color-orange;
 @theme-button-font-weight: 					 400;
 @theme-button-border-radius: 				 0px;
 @theme-button-box-shadow: 					 none;

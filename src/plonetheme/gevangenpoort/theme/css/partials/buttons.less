@@ -32,6 +32,22 @@
 		}
 	}
 
+	.btn.ghost {
+		background-color: @theme-ghost-button-background-color;
+		border-width: @theme-button-border-width;
+		border-color: @theme-ghost-button-border-color;
+		color: @theme-ghost-button-color;
+
+		&:hover,
+		&:focus,
+		&:active,
+		&:active:focus {
+			background-color: @theme-button-hover-background-color;
+			border-color: @theme-button-hover-border-color;
+			color: @theme-ghost-button-hover-color;
+		}
+	}
+
 	.input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group {
 		margin-left: @theme-button-group-margin-left;
 	}
