@@ -49,11 +49,11 @@
   <drop css:content="h1.documentFirstHeading" css:if-content="body.template-search"/>
 
   <!-- header mosaic layout -->
-  <replace css:theme="#header-wrapper .container.layout .title" css:content="h1.documentFirstHeading" method="raw" css:if-content="body.template-layout"/>
-  <replace css:theme="#header-wrapper .container.layout .description" css:content="div.mosaic-IDublinCore-description-tile .documentDescription" method="raw" css:if-content="body.template-layout"/>
+  <!--<replace css:theme="#header-wrapper .container.layout .title" css:content="h1.documentFirstHeading" method="raw" css:if-content="body.template-layout"/>
+  <replace css:theme="#header-wrapper .container.layout .description" css:content="div.mosaic-IDublinCore-description-tile .documentDescription" method="raw" css:if-content="body.template-layout"/>-->
   
-  <drop css:content="h1.documentFirstHeading" css:if-content="body.template-layout"/>
-  <drop css:content="div.mosaic-IDublinCore-description-tile .documentDescription" css:if-content="body.template-layout"/>
+  <!--<drop css:content="h1.documentFirstHeading" css:if-content="body.template-layout"/>
+  <drop css:content="div.mosaic-IDublinCore-description-tile .documentDescription" css:if-content="body.template-layout"/>-->
   <drop css:theme="#header-wrapper .container.main" css:if-content="body.template-layout"/>
   <drop css:theme="#header-wrapper .container.layout" css:if-content="body.template-search"/>
 
