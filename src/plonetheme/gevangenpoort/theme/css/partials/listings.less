@@ -1,7 +1,113 @@
 
 .entries() {
+
+	display: flex;
+    flex-wrap: wrap;
+
 	.entry {
 		margin-bottom: @theme-listing-entry-margin-bottom;
+	}
+
+	.entry-item {
+		padding-left: 0px;
+		padding-right: 0px;
+		width: 100%;
+		height: 50vh;
+		position: relative;
+		overflow: hidden;
+		min-height: 300px;
+
+		
+		@media(min-width: 768px) {
+			width: 50%;
+			height: 33.33333333vh;
+		}
+
+		@media(min-width: 992px) {
+			width: 33.33333333%;
+			height: 33.33333333vh;
+		}
+
+		@media(min-width: 992px) and (max-height: 820px) {
+			height: 50vh;
+		}
+
+		@media(min-width: 1500px) {
+			height: 50vh;
+		}
+
+		a {
+			position: absolute;
+		    width: 100%;
+		    height: 100%;
+		    top: 0;
+		    left: 0;
+
+		    background-position: 50%;
+		    background-size: cover;
+		    background-repeat: no-repeat;
+
+		    div.image-wrapper {
+		    	position: absolute;
+			    width: 100%;
+			    height: 100%;
+			    top: 0;
+			    left: 0;
+			    background-size: cover;
+    			background-position: center center;
+    			overflow: hidden;
+
+    			img {
+    				position: absolute;
+				    top: 0;
+				    left: 0;
+				    width: 100%;
+				    height: 100%;
+				    z-index: -1;
+				    -o-object-fit: cover;
+    				object-fit: cover;
+    				object-position: center bottom;
+
+    				transition: transform .8s ease,opacity .4s ease;
+    			}
+		    }
+
+		    div.summary {
+
+		    	flex-wrap: wrap;
+			    padding-left: ~"calc(5.5vw / 2)";
+			    padding-right: ~"calc(5.5vw / 2)";
+
+		    	padding-bottom: 35px;
+		    	z-index: 1;
+		    	position: absolute;
+			    top: 0;
+			    width: 100%;
+			    height: 100%;
+			    display: flex;
+			    flex-direction: column;
+			    justify-content: flex-end;
+			    background-image: linear-gradient(
+			180deg
+			,transparent 50%,rgba(32,35,39,.5));
+			    padding-bottom: 40px;
+			    color: #fff;
+
+
+		    }
+
+		    &:hover {
+		    	img {
+    				transform: scale(1.02);
+    			}
+		    }
+
+		    &.state-private {
+		    	.title-wrapper span {
+		    		color: @theme-color-dark-red !important;
+		    	}
+		    }
+		}
 	}
 
 	.image-wrapper, .title-wrapper, .description-wrapper {
@@ -64,6 +170,30 @@
 			font-size: @theme-listing-title-font-size;
 			color: @theme-listing-title-color;
 		}
+
+		span {
+			.Montserrat();
+			margin-bottom: 8px;
+			font-size: 25px;
+			line-height: 1.375;
+
+			
+			@media(min-width: 768px) {
+				font-size: 3.0vw;
+			}
+
+			@media(min-width: 992px) {
+				font-size: 2.0vw;
+			}
+
+			@media(min-width: 1400px) {
+				font-size: 30px;
+			}
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
 	}
 
 	.person-buttons-wrapper {
@@ -119,10 +249,27 @@
 	.description-wrapper {
 		p {
 			color: @theme-listing-description-color;
-			font-size: @theme-listing-description-font-size;
-			line-height: @theme-listing-description-line-height;
-			margin-top: @theme-listing-description-margin-top;
-			margin-bottom: @theme-listing-description-margin-bottom;
+			font-size: 17px;
+			line-height: 1.375;
+			margin-bottom: 0px;
+
+			abbr {
+				text-decoration: none !important;
+				border-bottom: 0px !important;
+				cursor: pointer;
+			}
+
+			@media(min-width: 769px) {
+				font-size: 2vw;
+			}
+
+			@media(min-width: 992px) {
+				font-size: 1.3vw;
+			}
+
+			@media(min-width: 1400px) {
+				font-size: 17px;
+			}
 		}
 	}
 
@@ -165,8 +312,8 @@
 	}
 
 	.main-container-wrapper {
-		padding-left: 120px;
-		padding-right: 120px;
+		padding-left: 15px;
+		padding-right: 15px;
 
 		@media (max-width: 991px) {
 			padding-left: 15px;
@@ -178,6 +325,14 @@
 		margin-top: @theme-listing-content-core-margin-top;
 		padding-left: @theme-listing-content-core-padding-left;
 		padding-right: @theme-listing-content-core-padding-right;
+	}
+
+	div.outer-wrapper #main-container {
+		article#content {
+			margin-left: -15px;
+			margin-right: -15px;
+			margin-bottom: 0px;
+		}
 	}
 }
 
@@ -457,6 +612,14 @@ body.frontend {
 
 		#content-core .entries {
 			.entries();
+		}
+
+		#portal-footer-wrapper {
+			margin-top: 0px;
+		}
+
+		footer.row {
+			display: none;
 		}
 	}
 

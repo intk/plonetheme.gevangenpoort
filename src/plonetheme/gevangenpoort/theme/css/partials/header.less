@@ -472,7 +472,6 @@
       }
     }
 
-
     /* Media queries for header image */
     .newsImageContainer, .mosaic-ILeadImageBehavior-image-tile {
       min-height: 500px;
@@ -483,11 +482,14 @@ body.frontend div.outer-wrapper {
 	.header();
 }
 
-body.frontend.portaltype-folder div.outer-wrapper,
-body.frontend.portaltype-collection div.outer-wrapper {
-    @media(min-width: 992px) {
-        h1.documentFirstHeading { 
-            margin-top: 180px;
+body.frontend div.website-wrapper.no-image div.outer-wrapper {
+    #top-header-wrapper {
+        h1.documentFirstHeading {
+            margin-top: 200px !important;
+
+            @media(max-width: 991px) {
+                margin-top: 110px !important;
+            } 
         }
     }
 }
