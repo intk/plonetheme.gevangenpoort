@@ -52,23 +52,6 @@ function load_menu() {
 	}
 };
 
-function load_popovers() {
-	if (jQuery('[data-toggle="popover"]').length > 0) {
-		jQuery('[data-toggle="popover"]').popover({"html": true});
-	}	
-};
-
-function load_videos() {
-	var video_wrapper_link = jQuery('a.video-wrapper-link');
-	var video_wrapper = jQuery('figure.video-wrapper');
-
-	if (video_wrapper.length) {
-		jQuery('.video-wrapper-link').on('click', function() {
-			video_wrapper.html('<iframe allowfullscreen frameborder="0" class="embed-responsive-item" src="' + video_wrapper_link.data('yt-video') + '" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>');
-		});
-	}
-};
-
 function load_cookie_banner() {
 	if (!getCookie("hide-dsgvo-banner")) {
 	    jQuery(".dsgvo-banner").show();
@@ -86,12 +69,6 @@ function detect_safari() {
 jQuery(document).ready(function () {
 	/* Menu */
 	load_menu();
-
- 	/* Popovers */
-	load_popovers();
-
-	/* Video */
-	load_videos();
 
 	/* Detect safari */
   	detect_safari();
