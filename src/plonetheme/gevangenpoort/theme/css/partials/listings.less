@@ -387,8 +387,8 @@ body:not(.frontend) #portal-footer-wrapper .portletCollection {
 
 
 body.frontend {
-	&.portaltype-folder,
-	&.portaltype-collection {
+	&.portaltype-folder:not(.template-index-html),
+	&.portaltype-collection:not(.template-index-html) {
 
 		.listing_structure();
 
