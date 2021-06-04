@@ -1,5 +1,5 @@
 
-body.template-search #content-core {
+.searchItems() {
 	.search-result {
 		float: left;
 		padding-top: 15px;
@@ -25,8 +25,9 @@ body.template-search #content-core {
 	}
 	
 	.search-result-title {
-		.Lato();
+		.Montserrat();
 		font-size: 1.375em;
+		line-height: 36px;
 		color: #000000;
 		font-weight: 400s;
 		border-bottom: 0px;
@@ -52,11 +53,24 @@ body.template-search #content-core {
 
 	.search-result-description {
 		.Lato();
-		color: @theme-listing-description-color;
-		font-size: @theme-listing-description-font-size;
-		line-height: @theme-listing-description-line-height;
-		margin-top: @theme-listing-description-margin-top;
+		color: #000000;
+		font-size: 21px;
+		line-height: 34px;
+		margin-top: 0px;
 		margin-bottom: @theme-listing-description-margin-bottom;
-	}
 
+		opacity: 1;
+	}
+}
+
+body.template-search #main-container #content-core {
+	.searchItems();
+}
+
+nav.pagination ul {
+	.Montserrat();
+
+	a {
+		.Montserrat();
+	}
 }

@@ -59,8 +59,24 @@
 		height: @theme-input-height;
 		background-color: @theme-input-background-color;
 		border: @theme-input-border;
+		border-bottom: @theme-input-border-bottom;
 		color: @theme-input-color;
 		font-size: @theme-input-font-size;
+		line-height: @theme-input-line-height;
+		padding-left: @theme-input-padding-left;
+
+		&::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+		  color: #000000;
+		  opacity: 1; /* Firefox */
+		}
+
+		&:-ms-input-placeholder { /* Internet Explorer 10-11 */
+		  color: #000000;
+		}
+
+		&::-ms-input-placeholder { /* Microsoft Edge */
+		  color: #000000;
+		}
 	}
 }
 
