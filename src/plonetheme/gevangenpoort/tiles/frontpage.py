@@ -8,6 +8,8 @@ from zope.schema.vocabulary import SimpleVocabulary
 from zope.component import getUtility
 from plone.app.standardtiles import PloneMessageFactory as _
 from plone.autoform import directives as form
+from zope.component import getMultiAdapter
+from zope.contentprovider.interfaces import IContentProvider
 
 from plone.app.standardtiles.existingcontent import IExistingContentTile
 from plone.app.standardtiles.existingcontent import ExistingContentTile
@@ -71,7 +73,13 @@ class IFrontpageTile(IExistingContentTile):
     form.omitted('tile_class')
 
 class FrontpageTile(ExistingContentTile):
-    pass
+
+    def formatted_date(self, item):
+        date_provider = getMultiAdapter(
+            (self.context, self.request, self),
+            IContentProvider, name='formatted_date'
+        )
+        return date_provider(item)
 
 
 @provider(IVocabularyFactory)

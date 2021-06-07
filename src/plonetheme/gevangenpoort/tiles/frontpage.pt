@@ -16,7 +16,9 @@
                       show_image python: data.get('show_image', False);
                       show_comments python: data.get('show_comments', False);
                       description_alternative python: data.get('description_alternative', False);
-                      show_icon python: data.get('show_icon', False);">
+                      show_icon python: data.get('show_icon', False);
+                      portal_type context/portal_type|nothing;
+                      item_is_event python:portal_type in ['Event'];">
 
       <section class="${view/tile_class} landscape-item">
         
@@ -34,13 +36,26 @@
                   tal:condition="show_title"
                   tal:content="title">Title or id</h2>
 
-              <p class="description"
-                   tal:define="context_description context/Description|nothing;
-                               description python: description_alternative if description_alternative else context_description"
-                   tal:content="description"
-                   tal:condition="show_description">
-                  Description
-              </p>
+              <tal:notevent tal:condition="python: not item_is_event">
+                <p class="description"
+                     tal:define="context_description context/Description|nothing;
+                                 description python: description_alternative if description_alternative else context_description"
+                     tal:content="description"
+                     tal:condition="show_description">
+                    Description
+                </p>
+              </tal:notevent>
+
+              <tal:event tal:condition="python:item_is_event">
+                <p class="description"
+                     tal:define="context_description context/Description|nothing;
+                                 description python: description_alternative if description_alternative else context_description"
+                     tal:condition="show_description">
+                    <tal:date tal:replace="structure python:view.formatted_date(context)"/>
+                </p>
+              </tal:event>
+
+
             </div>
           </div>
         </a>
