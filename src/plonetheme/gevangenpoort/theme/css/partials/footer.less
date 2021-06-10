@@ -63,6 +63,7 @@
 			width: 250px;
 			max-width: 90%;
 			margin-top: 17px;
+			height: auto;
 		}
 
 		p, h1, h2, h3, h4, h5 {
@@ -207,6 +208,10 @@
 			padding-left: 10px;
 
 			&:first-child {
+				padding-left: 0px;
+			}
+
+			@media(max-width: 991px) {
 				padding-left: 0px;
 			}
 

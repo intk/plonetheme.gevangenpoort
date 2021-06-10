@@ -34,7 +34,7 @@
             <div class="fontpage-tile-content-wrapper" tal:attributes="class python: 'fontpage-tile-content-wrapper' if not show_icon else 'fontpage-tile-content-wrapper show-icon'">
               <h2 tal:define="title context/Title|nothing"
                   tal:condition="show_title"
-                  tal:content="title">Title or id</h2>
+                  ><span tal:content="title">Title or id</span></h2>
 
               <tal:notevent tal:condition="python: not item_is_event">
                 <p class="description"

@@ -24,12 +24,21 @@
 
 			a {
 				color: #ffffff;
+				background-color: transparent;
+				display: inline;
+				background-image: linear-gradient(currentColor,currentColor);
+			    background-position: 0 100%;
+			    background-repeat: no-repeat;
+			    transition: background-size .2s linear;
+			    background-size: 0 2px;
+
 				&:hover,
 				&:focus,
 				&:active:focus {
 					color: #ffffff;
-					text-decoration: underline;
+					text-decoration: none;
 					border-bottom: 0px;
+					background-size: 100% 2px;
 				}
 			}
 		}
