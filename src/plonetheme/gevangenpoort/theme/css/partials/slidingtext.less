@@ -83,8 +83,24 @@
 			.PlatinMTProBold();
 			color: #ffffff;
 			margin-left: 20px;
-			padding-right: 80px;
+			
+			@media(min-width: 992px) {
+				display: inline;
 
+				background-color: transparent;
+
+				background-image: linear-gradient(currentColor,currentColor);
+			    background-position: 0 100%;
+			    background-repeat: no-repeat;
+			    transition: background-size .2s linear;
+			    background-size: 0 2px;
+
+			    &:hover {
+			    	text-decoration: none;
+			    	background-size: 100% 2px;
+			    }
+
+			}
 			@media(max-width: 991px) {
 				padding-right: 15px;
 				margin-left: 0px;
