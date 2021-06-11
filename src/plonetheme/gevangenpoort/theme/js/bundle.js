@@ -34,7 +34,7 @@ function getCookie(name) {
 
 function load_menu() {
 	var isLateralNavAnimating = false;
-	var menu_buttons = document.getElementsByClassName("cd-nav-trigger");
+	var menu_buttons = document.getElementsByClassName("cd-nav-trigger-wrapper");
 
 	var trigger_menu_button = function(event) {		
 		if( !isLateralNavAnimating ) {
